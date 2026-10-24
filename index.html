@@ -85,6 +85,15 @@
   .shot figcaption b{display:block;font-family:Orbitron;font-size:.95rem}
   .shot figcaption span{color:var(--muted);font-size:.85rem}
 
+  /* reviews */
+  .review{display:flex;flex-direction:column;gap:14px}
+  .stars{color:#ffc93c;letter-spacing:3px;font-size:1.1rem;text-shadow:0 0 10px rgba(255,201,60,.4)}
+  .quote{color:var(--text);font-size:1rem;flex:1}
+  .who{display:flex;align-items:center;gap:12px}
+  .avatar{width:40px;height:40px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-weight:700}
+  .who b{display:block;font-size:.95rem}
+  .who span{color:var(--muted);font-size:.85rem}
+
   /* about */
   .about{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
   .about h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:18px}
@@ -131,6 +140,7 @@
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
       <a href="#gallery">Builds</a>
+      <a href="#reviews">Reviews</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
@@ -162,10 +172,12 @@
         <h2>What We <span class="grad-text">Do</span></h2>
         <p>From a first gaming rig to a workstation for heavy rendering, we handle the whole job.</p>
       </div>
-      <div class="grid g3">
-        <div class="card reveal"><div class="icon">🖥️</div><h3>Custom Builds</h3><p>Hand-picked parts matched to your budget, games and software. Clean cable management included.</p></div>
+      <div class="grid g4">
+        <div class="card reveal"><div class="icon">🖥️</div><h3>Building & Assembly</h3><p>We pick the parts for a full custom build, or assemble parts you already bought. Clean cable management included.</p></div>
+        <div class="card reveal"><div class="icon">🔧</div><h3>Repair</h3><p>Crashes, overheating, no boot, dead parts? We find the problem and fix it.</p></div>
+        <div class="card reveal"><div class="icon">💾</div><h3>File Backup</h3><p>We back up your photos, documents and game saves to an external drive or the cloud, and move them to a new PC.</p></div>
+        <div class="card reveal"><div class="icon">🧹</div><h3>Dusting & Cleaning</h3><p>A deep clean of fans, filters and heatsinks, with fresh thermal paste. Your PC runs cooler and quieter.</p></div>
         <div class="card reveal"><div class="icon">⬆️</div><h3>Upgrades</h3><p>New GPU, more RAM, faster storage. We'll get more performance out of the PC you already own.</p></div>
-        <div class="card reveal"><div class="icon">🔧</div><h3>Repairs & Diagnostics</h3><p>Crashes, overheating, no boot? We track down the problem and fix it.</p></div>
         <div class="card reveal"><div class="icon">🌈</div><h3>RGB & Aesthetics</h3><p>Themed lighting, custom sleeved cables and showcase builds that look as good as they run.</p></div>
         <div class="card reveal"><div class="icon">🧪</div><h3>Stress Testing</h3><p>Every machine runs hours of thermal and stability tests before it leaves our bench.</p></div>
         <div class="card reveal"><div class="icon">🚚</div><h3>Setup & Delivery</h3><p>Windows installed, drivers updated, BIOS tuned. Local delivery and setup available.</p></div>
@@ -221,7 +233,37 @@
     </div>
   </section>
 
-  <section id="about">
+  <section id="reviews">
+    <div class="wrap">
+      <div class="head reveal">
+        <h2>Customer <span class="grad-text">Reviews</span></h2>
+        <p>What our customers say about working with One Tap.</p>
+      </div>
+      <!-- To add a review: copy one <div class="card review"> block, then change the stars, quote, name and service. -->
+      <div class="grid g3">
+        <div class="card review reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Paste a real customer review here."</p>
+          <div class="who"><span class="avatar">A</span><div><b>Customer Name</b><span>Custom Build</span></div></div>
+        </div>
+        <div class="card review reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Paste a real customer review here."</p>
+          <div class="who"><span class="avatar">B</span><div><b>Customer Name</b><span>Repair</span></div></div>
+        </div>
+        <div class="card review reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Paste a real customer review here."</p>
+          <div class="who"><span class="avatar">C</span><div><b>Customer Name</b><span>Dusting & Cleaning</span></div></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:34px" class="reveal">
+        <a href="mailto:hello@onetap.com?subject=My%20One%20Tap%20review" class="btn btn-ghost">Leave a Review</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="alt">
     <div class="wrap about">
       <div class="reveal">
         <h2>About <span class="grad-text">One Tap</span></h2>
@@ -238,7 +280,7 @@
     </div>
   </section>
 
-  <section id="contact" class="alt">
+  <section id="contact">
     <div class="wrap">
       <div class="head reveal">
         <h2>Get a <span class="grad-text">Quote</span></h2>
